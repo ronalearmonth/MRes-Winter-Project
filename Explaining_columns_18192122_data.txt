@@ -1,0 +1,104 @@
+#### Explanation of the column in the working spreadsheet for 2018, 2019, 2021 & 2022
+
+
+##Year, Date, month, DOY, Week no
+
+Year = The year the data were collected
+Month = The month the data were collected (as a number, i.e. 5 = May)
+Date = The date at which the bee sampling occurred as DD/MM/YYYY
+DOY = The day of the respective year at which the bee sampling occurred
+	(calculated as Date - 1st Jan +1)
+Week no = rough week during the season at which the bee sampling occurred
+		As bee sampling occurred fours days a week, week no should increase every four sampling days
+		However, I think there are some errors in this column where people were confused about which week they were on
+
+
+##Sample no, bee no
+Bee No = Every year, each bee observed was given a unique number that increased as the season progressed
+		No Bees refers to plot samples in which no bees were seen, so just contains the weather conditions for that plot
+		In 2018, No bees are written instead as "NXXX", as they numbered each time no bees were observed.
+Sample No = Bee No and Year combined, so every bee within the dataset should have a unique Sample No
+
+
+##Sub transect, Sub transect numbered, vegetation zone, altitude and plot photo
+Sub Transect  = refers to the bumblebee sampling plot (thirteen in total) -> the name of each sampling plot refers to the two poles along the transect that the plot is between
+Sub Transect numbered = the number of the sampling plot going up the mountain
+				E.g. 04-05 is the lowest elevation sampling plot and is numbered 1
+					73-74 is the highest elevation sampling plot and is numbered 13
+Vegetation Zone = Which vegetation zone does the plot lie in? This ranges from A (Old Birch forest) to E (alpine heath).
+Altitude = The mean sampling plot elevation (estimated as =  (elevation of bottom transect pole for plot + elevation of top transect pole for plot)/2)
+Plot photo = For each sampling period, a photo of the plot was taken
+		There should be a photo for each plot observation, but sometimes this was not taken, and a lot are missing for 2019
+
+
+##time start, time end, stopwatch time, within 20, n loops, observer/catcher
+Time Start = time of day that the sampling started; formatted as hh:mm:ss
+Time End = time of day that the sampling finished; formatted as hh:mm:ss
+Stop watch time = "length" of the observation period; should be roughly 20 min; formatted as hh:mm:ss
+Within 20 = was the bee caught within 20 mins of sampling (this was only recorded for 2018)
+N_loops = How many times was the sampling plot walked around? Should be roughly 2.
+Observer/Catcher = Who performed the sampling?
+
+
+##Activity flying foraging, quadrant, catch
+Activity_flying_foraging = what was the bee doing when it was observed?
+					Foraging means the bee was specifically on a flower (and hopefully feeding)
+					Flying is a "catch all" for all non-foraging activities; 
+						e.g. sometimes the bee was crawling on the ground (should say in notes), but we recorded this bee as flying.
+Quadrat_observed_in = Where was the bee observed within the plot? Defined when looking up the transect
+				BL = bottom left; TL = top left; BR = bottom right; TR = top right
+Catch_Y_N = Was the bee caught? If Y, then the bee should also have a photo, tarsal clip, paint pen & other processing information
+				
+
+###bombus species, bombus species certainty, bee photo number, bee photo chosen acj, social parasitic
+Bombus_Species = bee species identity; if we weren't sure, then multiple species names would be given, separated by a slash
+			Bombus alpinus and Bombus polaris were grouped as a species complex, as were Bombus norvegicus and B. sylvestris
+Bombus_species_certainty = How confident were we about the bee species identity? Ranges from 1 (not confident) to 3 (very confident)
+Bee Photo number = The photo(s) taken of the bee during processed
+Bee Photo Chosen ACJ = If multiple photos were taken during processing, this column specifies the photo number in which intertegular distance 
+				can be most accurately measured. In this column, the photo numbers are also formatted to be able to easily merge with data extracted from the photos themselves
+Social_parasitic = is the bee species a social parasite? Y = Parasitic (note that parasitic species should have no worker caste)
+
+
+###Caste, caste certainty, caste assigned ct
+Caste = Caste assigned in the field: Q = queen; W = worker; D = drone
+Caste certainty = How confident were we in how the caste was assigned? 1 = not confident; 3 = very confident
+			This was not recorded in 2018, so I assigned all 2018 bees with an intertegular distance a confidence score of 2
+Caste assigned CT = Caste assigned according to a binomial model based on body size of queens and workers
+
+###Flower species, flower photo, corrected flower species id, corrected flower species id2, flower sample, flower height
+Flower species = if the bee was foraging, what flower was it seen on? [What was originally recorded in the field]
+Flower photo = photo(s) taken of the plant species for identification purposes
+Corrected flower species ID = Flower species after some corrections from Christine
+Corrected flower species ID2 = All plant photos were uploaded to inaturalist, to have species identity confirmed; 
+						This columns also contains observations that were confirmed through inaturalist
+
+
+###weather -> these variables were recorded in the field prior to observations; they are probably not very accurate
+
+##tag, tag applied
+Tag applied = in 2018, tags were applied to bees, so if an individual was recaptured, the original bee could be identified (Y/N/NA)
+Tag = the type of tag that was applied; should have a colour and a number
+
+###recapture, paint pen, pollen present, pollen collected, tarsal clip
+Should all be Y/N or NA
+
+Recapture = For bees caught in the field, had they been caught previously? (as identified through presence of white paint pen)
+Paint pen = when a bee was caught, did we apply paint pen?
+Pollen present = For caught bees, is there pollen in the pollen sac?
+Pollen collected = If caught bees carried pollen, did we take a sample?
+Tarsal clip = for caught bees, did we take a DNA sample (tarsal clip)?
+
+
+###intertegular distance, wing length, head width
+These are based off measurements from photos of the bees; all measured in TPS dig and merged into observation data using Bee photo chosen ACJ
+
+Intertegular distance (cm) = distance between where the wings join the bee's thorax
+Wing length (cm) = distance between one of the tegulae and the bottom-most wing vein
+Head width (cm) = furthest distance between distal points of the bee's eyes
+
+###estimated prementum length, estimated total tongue length
+These are based off mixed-effects models that relate aspects of tongue length to bee species, caste and intertegular distance; both rounded to 3 significant figures
+ 
+Estimated_prementum_length_cm = estimated length of the hard section of the top of the tongue (prementum); measured in tps dig
+Est_total_tongue_length_cm = estimated length of the total tongue (prementum + glossa); measured in ImageJ
